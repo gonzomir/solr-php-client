@@ -1183,7 +1183,7 @@ class Apache_Solr_Service
 		$flushValue = $waitFlush ? 'true' : 'false';
 		$searcherValue = $waitSearcher ? 'true' : 'false';
 
-		$rawPost = '<optimize waitFlush="' . $flushValue . '" waitSearcher="' . $searcherValue . '" />';
+		$rawPost = '<optimize waitSearcher="' . $searcherValue . '" />';
 
 		return $this->_sendRawPost($this->_updateUrl, $rawPost, $timeout);
 	}
